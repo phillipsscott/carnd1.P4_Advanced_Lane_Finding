@@ -89,26 +89,30 @@ When I was comfortable with the image warp function, I moved on to the threshold
 
 **Thresholding Approaches:**
 *Gradient Thresholds*
-Sobel Gradient - x/y dimensions
-Magnitude of Sobel Gradient
-Direction of Sobel Gradient
+
+- Sobel Gradient - x/y dimensions
+- Magnitude of Sobel Gradient
+- Direction of Sobel Gradient
 
 *Color Thresholds*
-HLS Threshold
-HSV Threshold
-YUV Threshold
-LAB Threshold
+
+- HLS Threshold
+- HSV Threshold
+- YUV Threshold
+- LAB Threshold
 
 
 After experimenting with a number of different thresholding levels of each, I decided to combine the following into a blended threshold.
 
-**Method**|**Channel**|**Threshold**|
---- |: --- :| --- :|
-Sobel Gradient | x-Dim | (20,100)|
-Sobel Magnitude | *n/a* | (20,50)|
-HLS Threshold | L-Channel | (210,255)|
-YUV Threshold | V-Channel | (10,90)|
-LAB Threshold | B-Channel | (50,150)|
+
+|**Method**|**Channel**|**Threshold**|
+|:--------:|:---------:|:-----------:|
+|Sobel Gradient | x-Dim | (20,100)|
+|Sobel Magnitude | *n/a* | (20,50)|
+|HLS Threshold | L-Channel | (210,255)|
+|YUV Threshold | V-Channel | (10,90)|
+|LAB Threshold | B-Channel | (50,150)|
+
 
 ![im05](output_images/05-sobel-x.png "SobelX Threshold")
 
