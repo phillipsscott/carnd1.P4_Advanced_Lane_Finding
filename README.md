@@ -61,8 +61,6 @@ Below, you can see the result of the camera calibration process on the undistort
 
 #### 2. Describe how (and identify where in your code) you performed a perspective transform and provide an example of a transformed image.
 
-Lines 9-15
-
 I chose to first warp the image from 'driver-view' to 'bird's-eye view', because it had the effect of cropping out areas of the image that are not relevant to the lane-finding exercise. 
 
 Cells corresponding to the perspective transform process are cells 9-15. In the `warp_img` function, I use the OpenCV functions `getPerspectiveTransform` and `warpPerspective` to both warp an input image to bird's-eye view, and unwarp a bird's-eye view image to driver-view with the `revert` flag.
